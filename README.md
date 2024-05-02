@@ -1,1 +1,1 @@
-This is a folder for Data STructure and Algorithm practice
+This is a folder for Data Structure and Algorithm practice
