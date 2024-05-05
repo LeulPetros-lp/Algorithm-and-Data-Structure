@@ -1,24 +1,16 @@
 const text_fixer = (string) => {
-    let string_array = string.split("");
+   let capil = [];
 
-    // creating an array to store the numbers where the index of the -->
-    // letters than need to upper case..
-    let uplet_index = [0];
-
-
-    // creating the for loop to check the location for the text -->
-    // and push the location of the letter where its supposed to be.
-    for(let i = 0; i < string_array.length; i++) {
-        if(string_array[i] === ' ' || string_array[i] === '.') {
-               uplet_index.push(i+1);
-        }
-    }
+   string_arr = string.split(" ");
    
-    // transforming based on the uplet index's
-    for (let j = 0; j < uplet_index.length;j++) {
-        string_array[uplet_index[j]] = string_array[uplet_index[j]].toUpperCase() 
-    }
-    return string_array.join("")
+   
+   for (let i = 0; i < string_arr.length; i++) {
+      capil.push(string_arr[i][0].toUpperCase() + string_arr[i].slice(1));
+   }
+   
+   return capil.join(" ")
+
+
 }
 
 module.exports = text_fixer;
