@@ -1,31 +1,16 @@
-const duplicate_remover = (array) => {
+const duplicate_remover = (arr) => {
 
-    let duplicate_index  = [];
-    let fixed_array = [];
-
-    console.log(array)
-
-    for(let i = 0; i < array.length; i++) {
-        let isDuplicate = false;
-
-        for(let j = i+1; j < array.length; j++) {
-            if(array[i] == array[j]){
-                isDuplicate = true;
-                break
-            }
-        }
-
-        if(isDuplicate) {
-           array.pop(i-1);
-        }
-
-    }
-
-    console.log(array)
-
-
-    return fixed_array;
-
+    let fixed_arr = [];
+  
+    for(let i = 0; i < arr.length;i++) {
+      if(!fixed_arr.includes(arr[i])){
+        fixed_arr.push(arr[i])
+      }
+    } 
+  
+    return fixed_arr
+  
 }
 
-module.exports = duplicate_remover;
+
+module.exports = duplicate_remover
