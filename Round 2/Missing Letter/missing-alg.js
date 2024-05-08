@@ -15,7 +15,7 @@ const find_missing = (array_letters) =>  {
     }
 
     for(let j = 0; j < array_letters.length; j++) {
-        if(array_letters.indexOf(array_letters[j]) !== correct_array.indexOf(correct_array[j])){
+        if(array_letters[j] !== correct_array[j]){
             missing_values.push(correct_array[j]);
         } 
     }
